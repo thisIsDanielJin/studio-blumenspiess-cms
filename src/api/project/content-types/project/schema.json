@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,9 +17,6 @@
     "Ort": {
       "type": "string"
     },
-    "Personinnen": {
-      "type": "string"
-    },
     "Beschreibung_1": {
       "type": "text"
     },
@@ -26,24 +24,34 @@
       "type": "text"
     },
     "Titelbild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Weitere_Bilder": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Untertitel": {
+      "type": "string"
+    },
+    "Personinnen": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text.personinnen"
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_text_personinnens",
+  "info": {
+    "displayName": "Personinnen",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Person": {
+      "type": "string"
+    }
+  }
+}

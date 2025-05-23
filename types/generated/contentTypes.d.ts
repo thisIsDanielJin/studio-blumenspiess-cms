@@ -376,6 +376,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
+    description: '';
     displayName: 'Project';
     pluralName: 'projects';
     singularName: 'project';
@@ -397,9 +398,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Name: Schema.Attribute.String;
     Ort: Schema.Attribute.String;
-    Personinnen: Schema.Attribute.String;
+    Personinnen: Schema.Attribute.Component<'text.personinnen', true>;
     publishedAt: Schema.Attribute.DateTime;
     Titelbild: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Untertitel: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
